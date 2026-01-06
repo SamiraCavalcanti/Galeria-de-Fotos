@@ -37,8 +37,8 @@ Uma galeria de fotos interativa que permite visualizar, pesquisar e filtrar imag
 
 1. **Clone o repositório**
 ```bash
-git clone <url-do-repositorio>
-cd galeria-de-fotos
+git clone git@github.com:SamiraCavalcanti/Galerria-de-Fotos.git
+cd Galerria-de-Fotos
 ```
 
 2. **Instale as dependências**
@@ -83,19 +83,23 @@ galeria-de-fotos/
 │   │   ├── PhotoGrid.jsx        # Grid de fotos
 │   │   ├── PhotoGrid.css
 │   │   ├── PhotoCard.jsx        # Card individual de foto
+│   │   ├── PhotoCard.css
 │   │   ├── PhotoModal.jsx       # Modal para visualização ampliada
 │   │   ├── PhotoModal.css
 │   │   ├── Footer.jsx           # Rodapé
 │   │   └── Footer.css
 │   ├── App.jsx                  # Componente principal
 │   ├── App.css                  # Estilos globais
-│   ├── config.js                # Configuração da APIcipal
-│   ├── App.css                  # Estilos globais
+│   ├── config.js                # Configuração da API
+│   ├── index.css                # Reset CSS
 │   └── main.jsx                 # Ponto de entrada
 ├── package.json
 └── README.md
 ```
-animado pastel (lavanda, azul céu, rosa, azul claro)
+
+## 🎨 Características de Design
+
+- **Paleta de Cores**: Gradiente animado pastel (lavanda, azul céu, rosa, azul claro)
 - **Tipografia**: Segoe UI, fonte moderna e legível
 - **Glass Morphism**: Efeito de vidro fosco em header e cards
 - **Gradiente Animado**: Fundo com movimento suave e contínuo
@@ -103,7 +107,10 @@ animado pastel (lavanda, azul céu, rosa, azul claro)
 - **Animações**: Transform, scale, shadow effects e fade in/out
 - **Grid Adaptativo**: Auto-fill com minmax para responsividade
 - **Modal Interativo**: Visualização ampliada com backdrop blur
-- API Principal: Unsplash** - https://unsplash.com ✨
+
+## 🔍 API Utilizada
+
+**API Principal: Unsplash** - https://unsplash.com ✨
 - Fotos profissionais de altíssima qualidade
 - 20 imagens curadas e únicas
 - **Atualmente ATIVA** no projeto
@@ -111,14 +118,13 @@ animado pastel (lavanda, azul céu, rosa, azul claro)
 
 **API Alternativa: Lorem Picsum** - https://picsum.photos
 - Fotos selecionadas por IDs específicos
-- Backup automático
+- Backup automático caso Unsplash não esteja disponível
 - Gratuita e sem necessidade de autenticação
 
 ### Configuração da API:
 
-A aplicação já está configurada com Unsplash ativa. Para modificar:
+A aplicação já está configurada com Unsplash ativa. Para modificar, edite o arquivo `src/config.js`:
 
-Edite o arquivo `src/config.js`:
 ```javascript
 // Unsplash ativa:
 export const UNSPLASH_ACCESS_KEY = 'SUA_KEY_AQUI';
@@ -126,12 +132,6 @@ export const UNSPLASH_ACCESS_KEY = 'SUA_KEY_AQUI';
 // Voltar para Lorem Picsum:
 export const UNSPLASH_ACCESS_KEY = null;
 ```
-   // Descomente e cole sua key:
-   export const UNSPLASH_ACCESS_KEY = 'SUA_KEY_AQUI';
-   ```
-5. **Recarregar** a aplicação
-
-A aplicação funciona perfeitamente com ou sem Unsplash!
 
 ## 👩‍💻 Desenvolvido por
 
@@ -139,9 +139,10 @@ Samira - Processo Seletivo Aceleradora Ágil 2026/1
 
 ## 📄 Licença
 
-© 2026 Galeria de Fotos. Todos os direitos reservados. Clique em qualquer foto para visualizar em tamanho maior no modal interativo.
+© 2026 Galeria de Fotos. Todos os direitos reservados.
 
 ---
 
-**Instrutor/Avaliador**: Para testar a funcionalidade de busca, digite nomes de autores na barra de pesquisa. A filtragem acontece em tempo real!
+**Instrutor/Avaliador**: Para testar a funcionalidade de busca, digite nomes de autores na barra de pesquisa. A filtragem acontece em tempo real! Clique em qualquer foto para visualizar em tamanho maior no modal interativo.
+
 
