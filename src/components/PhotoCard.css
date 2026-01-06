@@ -1,0 +1,75 @@
+.photo-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.photo-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(166, 193, 238, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.photo-image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover .photo-image {
+  transform: scale(1.1);
+}
+
+.photo-name {
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .photo-image-container {
+    height: 220px;
+  }
+
+  .photo-name {
+    padding: 15px;
+    font-size: 0.95rem;
+    min-height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-image-container {
+    height: 200px;
+  }
+
+  .photo-name {
+    padding: 12px;
+    font-size: 0.9rem;
+    min-height: 50px;
+  }
+
+  .photo-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
